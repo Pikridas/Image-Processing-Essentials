@@ -2,7 +2,7 @@ im = imread('cameraman.tif');
 c1 = imnoise(im,'salt & pepper',0.2);
 c2 = imnoise(im,'gaussian',0,0.05);
 
-%FILTRA CAMERAMAN Ã≈ SALT & PEPPER
+%FILTRA CAMERAMAN √å√Ö SALT & PEPPER
 pre = edge(c1,'prewitt');
 rob = edge(c1,'roberts');
 sob = edge(c1,'sobel');
@@ -12,7 +12,7 @@ lg = fspecial('log',13,2);
 zclg = edge(c1,'zerocross',lg);
 can = edge(c1,'canny');
 
-%EMFANISI AKMWN CAMERAMAN Ã≈ SALT & PEPPER
+%EMFANISI AKMWN CAMERAMAN √å√Ö SALT & PEPPER
 subplot(2,3,1)
 imshow(pre);
 title({'S&P CAMERAMAN';'PREWITT EDGE'});
@@ -43,7 +43,7 @@ lg = fspecial('log',13,2);
 zclg = edge(c2,'zerocross',lg);
 can = edge(c2,'canny');
 
-%EMFANISI AKMWN CAMERAMAN Ã≈ GAUSSIAN
+%EMFANISI AKMWN CAMERAMAN √å√Ö GAUSSIAN
 subplot(2,3,1)
 imshow(pre);
 title({'GAUS CAMERAMAN';'PREWITT EDGE'});
